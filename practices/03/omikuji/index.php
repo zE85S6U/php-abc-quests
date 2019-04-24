@@ -1,5 +1,5 @@
 <?php
-switch (rand(9, 9)) {
+switch (rand(0, 9)) {
 	case 0:
 	case 1:
 	case 2:
