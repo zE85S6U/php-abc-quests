@@ -1,20 +1,26 @@
 <?php
+$templates = [
+	'凶'   => 'ごめんなさい。あなたの今日の運勢は<b>凶</b>です。',
+	'吉'   => 'あなたの今日の運勢は<b>吉</b>です。',
+	'大吉' => 'おめでとうございます！あなたの今日の運勢は<b>大吉</b>です！'
+];
+
 switch (rand(0, 9)) {
 	case 0:
 	case 1:
 	case 2:
-		$result = 'ごめんなさい。あなたの今日の運勢は凶です。';
+		$result = '凶';
 		break;
 	case 3:
 	case 4:
 	case 5:
 	case 6:
 	case 7:
-		$result = 'あなたの今日の運勢は吉です。';
+		$result = '吉';
 		break;
 	case 8:
 	case 9:
-		$result = 'おめでとうございます！あなたの今日の運勢は大吉です！';
+		$result = '大吉';
 		break;
 }
 ?>
@@ -27,6 +33,6 @@ switch (rand(0, 9)) {
 	<title>test</title>
 </head>
 <body>
-	<p>あなたの今日の運勢は<br><?php echo $result; ?>です。</p>
+	<p><?php echo $templates[$result]; ?></p>
 </body>
 </html>
