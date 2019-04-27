@@ -1,11 +1,25 @@
 @charset 'utf-8';
 
+main {
+  width: 400px;
+  margin: 0 auto;
+}
 .required::before {
   content: " *";
   color: #E00;
 
 }
 
-table td {
-  font-size: 1.2em;
+td p {
+  font-size: 1.3em;
+}
+
+.checked_ok {
+  font-size: 1.3em;
+  background-color: greenyellow;
+}
+
+.checked_ng {
+  font-size: 1.3em;
+  background-color: red;
 }
