@@ -21,6 +21,13 @@ if (isset($_REQUEST['operator'])) {
       $result = $formula.'='. $answer;
       break;
   }
+  // 設定ファイルを読み込み
+  $settings = require __DIR__ . '/../../secret-settings.php';
+
+      // 計算結果をメールで送信.
+      // mb_language('Japanese');
+      // mb_internal_encoding('UTF-8');
+      mail($settings['email'], 'test result', $result, 'From: <no-reply@example.com>');
 } else {
   $result = '計算結果なし';
 }
