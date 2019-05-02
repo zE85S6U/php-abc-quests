@@ -1,8 +1,31 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-main {
-  width: 400px;
-  margin: 0 auto;
+body * {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.4fr repeat(6, 1fr) 0.4fr;
+  grid-column-gap: 5%;
+  column-gap: 5%;
+}
+
+body > * {
+  grid-column: 2 / -2;
+}
+form p {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+textarea {
+  height: 120px;
 }
 .required::before {
   content: " *";
@@ -10,16 +33,14 @@ main {
 
 }
 
-td p {
-  font-size: 1.3em;
-}
-
 .checked_ok {
   font-size: 1.3em;
+  border: solid 1px green;
   background-color: greenyellow;
 }
 
 .checked_ng {
   font-size: 1.3em;
+  border: solid 1px rebeccapurple;
   background-color: red;
 }
